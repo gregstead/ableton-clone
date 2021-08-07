@@ -1,2 +1,2 @@
 # ableton-clone
-A clone of Ableton's landing page
+A clone of Ableton's about page
