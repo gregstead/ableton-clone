@@ -304,6 +304,12 @@ header {
 
   .main-nav__link-list {
     display: inline-block;
+    padding-left: o;
+  }
+
+  .main-nav__link-list .main-nav__link-list__item:first-child {
+    margin-left: 0;
+    padding-left: 0;
   }
 
   .main-nav__link-list__item {
