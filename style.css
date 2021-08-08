@@ -1,0 +1,66 @@
+:root {
+  --clr-white: #fff;
+  --clr-yellow: #fbffa7;
+  --clr-orange: #ff764d;
+  --clr-lilac: #b1c5ff;
+  --clr-lavender: #d5b3ff;
+  --clr-green: #b6ffc0;
+  --clr-blue: #0000ff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+header {
+  transition: all ease-in 250ms;
+}
+
+.main-nav {
+  position: relative;
+  padding-top: 1.25rem;
+  padding-bottom: 0;
+  overflow: visible;
+}
+
+.main-nav__logo {
+  position: absolute;
+  margin-left: 1.25rem;
+  margin-right: 2em;
+  margin-bottom: 1.25rem;
+}
+
+.main-nav__primary-wrapper--collapses {
+  width: 100%;
+  transition: ease-in 250ms;
+  background-color: var(--clr-blue);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.35s ease-in-out;
+  transform: translateY(-100%);
+  padding: 5rem 1.25rem;
+}
+
+.is-expanded {
+  color: var(--clr-white);
+}
+
+.is-expanded > .main-nav__logo {
+  stroke: var(--clr-white);
+  fill: var(--clr-white);
+}
+
+.is-expanded > .main-nav__primary-wrapper--collapses {
+  transform: translateY(0%);
+}
