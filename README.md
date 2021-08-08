@@ -1,2 +1,11 @@
 # ableton-clone
-A clone of Ableton's about page
+
+A responsive clone of Ableton's menu header
+
+# source
+
+https://www.ableton.com/en/about/
+
+# deployed project
+
+https://gregstead.github.io/ableton-clone
