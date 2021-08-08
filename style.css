@@ -242,7 +242,7 @@ header {
   }
 
   .is-expanded > div > .main-nav__more {
-    display: inline-block;
+    display: block;
   }
 
   .main-nav__more {
@@ -270,10 +270,23 @@ header {
     color: #000;
   }
 
+  .main-nav__primary-wrapper--collapses .main-nav__link-list__item {
+    display: inline-block;
+  }
+
   .main-nav__logo {
     position: absolute;
     top: 1.25rem;
     left: 0;
+  }
+
+  .main-nav__link-list {
+    display: inline-block;
+  }
+
+  .main-nav__link-list__item {
+    margin: 0 0 0 0.3125rem;
+    display: inline-block;
   }
 
   .main-nav__link-list--primary {
