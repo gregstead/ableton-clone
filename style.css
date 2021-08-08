@@ -1,6 +1,19 @@
 @font-face {
   font-family: "futura-pt";
+  font-style: normal;
   src: url("./assets/futura-pt-book.2dadbb3c03c1.woff2");
+}
+
+@font-face {
+  font-family: "futura-pt";
+  font-style: italic;
+  src: url("./assets/futura-pt-book-oblique.bd17c4c4318c.eot");
+}
+
+@font-face {
+  font-family: "futura-pt";
+  font-style: bold;
+  src: url("./assets/futura-pt-medium.5201fc3a314d.eot");
 }
 
 :root {
@@ -22,6 +35,18 @@
 body {
   font-size: 16px;
   font-family: "futura-pt";
+  width: 100vw;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  display: block;
 }
 
 body,
@@ -60,11 +85,11 @@ header {
 
 .main-nav__logo__image g {
   transition: fill 0.35s;
-  fill: #000;
 }
 
 .main-nav__trigger-label {
   font-size: 1.25rem;
+  font-weight: bold;
   line-height: 1.5;
   transition: color 0.35s;
   user-select: none;
@@ -90,10 +115,21 @@ header {
 }
 
 .is-expanded > .main-nav__logo {
-  stroke: var(--clr-white);
+  stroke: none;
   fill: var(--clr-white);
 }
 
 .is-expanded > .main-nav__primary-wrapper--collapses {
   transform: translateY(0%);
+}
+
+/* Z-indexes */
+
+.main-nav__logo,
+.main-nav__trigger-label {
+  z-index: 30;
+}
+
+.main-nav {
+  z-index: 35;
 }
