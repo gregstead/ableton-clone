@@ -29,7 +29,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -68,6 +68,14 @@ header {
   overflow: visible;
 }
 
+.main-nav__col {
+  padding: 0 0.625rem;
+}
+
+.main-nav__col--25p {
+  min-width: 15em;
+}
+
 .main-nav__logo {
   display: inline-block;
   vertical-align: middle;
@@ -87,6 +95,40 @@ header {
   transition: fill 0.35s;
 }
 
+.main-nav__link-list {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-nav__link-list__item {
+  order: 1;
+  padding: 0 0.625rem;
+}
+
+.main-nav__link-list__item > span {
+  display: none;
+}
+
+.main-nav__link-list--primary {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  width: 100%;
+  padding-right: 1.25rem;
+  align-content: center;
+  align-items: center;
+}
+
+.main-nav__link-list__item--account {
+  font-size: 0.875rem;
+}
+
 .main-nav__trigger-label {
   font-size: 1.25rem;
   font-weight: bold;
@@ -96,7 +138,7 @@ header {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.9375rem;
 }
 
 .main-nav__trigger-label:after {
@@ -123,12 +165,46 @@ header {
   transition: transform 0.35s ease-in-out;
   transform: translateY(-100%);
   padding: 5rem 1.25rem;
+  color: var(--clr-white);
+}
+
+.main-nav__primary-wrapper--collapses .main-nav__link-list__item {
+  display: block;
+  margin-bottom: 1em;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.main-nav__slideable {
+  padding-bottom: 1.25rem;
+  overflow-x: auto;
+}
+
+.main-nav__slideable-wrapper {
+  position: relative;
 }
 
 .main-nav.is-expanded .main-nav__trigger-label:after {
   margin-bottom: 2px;
   border-bottom-color: var(--clr-white);
   border-top-color: transparent;
+}
+
+.main-nav__row {
+  display: flex;
+  margin: 0 -0.625rem;
+}
+
+.main-nav__separator {
+  display: block;
+  height: 0;
+  border-top: 2px solid #eee;
+}
+
+.main-nav__stretcher {
+  position: relative;
+  top: -1px;
+  height: 1px;
 }
 
 .is-expanded {
