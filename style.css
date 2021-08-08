@@ -4,7 +4,7 @@
   src: url("./assets/futura-pt-book.2dadbb3c03c1.woff2");
 }
 
-@font-face {
+/* @font-face {
   font-family: "futura-pt";
   font-style: italic;
   src: url("./assets/futura-pt-book-oblique.bd17c4c4318c.eot");
@@ -14,7 +14,7 @@
   font-family: "futura-pt";
   font-style: bold;
   src: url("./assets/futura-pt-medium.5201fc3a314d.eot");
-}
+} */
 
 :root {
   --clr-white: #fff;
@@ -232,6 +232,14 @@ header {
 }
 
 @media screen and (min-width: 1024px) {
+  body,
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+
   /* typography */
   .main-nav__link-list {
     font-size: 1rem;
@@ -260,6 +268,23 @@ header {
 
   .is-expanded > div > .main-nav__more {
     display: block;
+  }
+
+  .main-nav__col {
+    padding: 0 1.25rem;
+  }
+
+  .main-nav__col:first-child {
+    padding: 0 0;
+  }
+
+  .main-nav__row {
+    margin: 0;
+  }
+
+  .main-nav__row:first-child {
+    margin-left: 0;
+    padding-left: 0;
   }
 
   .main-nav__more {
