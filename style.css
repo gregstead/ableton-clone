@@ -230,3 +230,63 @@ header {
 .main-nav {
   z-index: 35;
 }
+
+@media screen and (min-width: 1024px) {
+  .is-expanded {
+    color: #000;
+  }
+
+  .is-expanded > .main-nav__logo {
+    stroke: none;
+    fill: #000;
+  }
+
+  .is-expanded > div > .main-nav__more {
+    display: inline-block;
+  }
+
+  .main-nav__more {
+    display: none;
+  }
+
+  .show {
+    display: inline-block;
+  }
+
+  .main-nav__trigger-label,
+  .main-nav__trigger-label:after {
+    display: none;
+  }
+
+  .main-nav__primary-wrapper--collapses {
+    background-color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.35s ease-in-out;
+    transform: translateY(0%);
+    color: #000;
+  }
+
+  .main-nav__logo {
+    position: absolute;
+    top: 1.25rem;
+    left: 0;
+  }
+
+  .main-nav__link-list--primary {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 1.75rem;
+    padding-left: 7.5rem;
+    padding-bottom: 0;
+  }
+
+  .main-nav__link-list__item > span {
+    display: inline-block;
+    color: var(--clr-orange);
+  }
+}
