@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "futura-pt";
+  src: url("./assets/futura-pt-book.2dadbb3c03c1.woff2");
+}
+
 :root {
   --clr-white: #fff;
   --clr-yellow: #fbffa7;
@@ -12,6 +17,11 @@
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  font-family: "futura-pt";
 }
 
 body,
@@ -34,10 +44,33 @@ header {
 }
 
 .main-nav__logo {
-  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
   margin-left: 1.25rem;
   margin-right: 2em;
   margin-bottom: 1.25rem;
+}
+
+.main-nav__logo__image {
+  display: block;
+  width: 3.75em;
+  height: 1.75em;
+}
+
+.main-nav__logo__image g {
+  transition: fill 0.35s;
+  fill: #000;
+}
+
+.main-nav__trigger-label {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  transition: color 0.35s;
+  user-select: none;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .main-nav__primary-wrapper--collapses {
