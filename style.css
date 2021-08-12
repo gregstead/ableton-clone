@@ -1,20 +1,4 @@
-@font-face {
-  font-family: "futura-pt";
-  font-style: normal;
-  src: url("./assets/futura-pt-book.2dadbb3c03c1.woff2");
-}
-
-/* @font-face {
-  font-family: "futura-pt";
-  font-style: italic;
-  src: url("./assets/futura-pt-book-oblique.bd17c4c4318c.eot");
-}
-
-@font-face {
-  font-family: "futura-pt";
-  font-style: bold;
-  src: url("./assets/futura-pt-medium.5201fc3a314d.eot");
-} */
+@import url("https://fonts.googleapis.com/css2?family=Alata");
 
 :root {
   --clr-white: #fff;
@@ -34,7 +18,7 @@
 
 body {
   font-size: 16px;
-  font-family: "futura-pt";
+  font-family: "Alata";
   width: 100vw;
   line-height: 1.5;
   overflow-x: hidden;
@@ -59,6 +43,17 @@ p {
 
 header {
   transition: all ease-in 250ms;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8.3vh 8.3vh 8.3vh;
+  background-image: url("https://source.unsplash.com/random/600x800");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: calc(100vh);
 }
 
 .main-nav {
