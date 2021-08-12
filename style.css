@@ -25,7 +25,8 @@ a {
   color: inherit;
 }
 
-.first-section > p {
+.first-section > p,
+.third-section > p {
   font-size: 1.1em;
 }
 
@@ -85,7 +86,8 @@ header {
   padding: 20vh 25vw;
 }
 
-.first-section > p {
+.first-section > p,
+.third-section > p {
   padding-top: 4.5vh;
 }
 
