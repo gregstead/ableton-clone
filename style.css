@@ -390,21 +390,10 @@ header {
     padding-left: o;
   }
 
-  .main-nav__link-list .main-nav__link-list__item:first-child {
-    margin-left: 0;
-    padding-left: 0;
-  }
-
   .main-nav__link-list__item {
     margin-right: 0.3125rem;
     padding: 0 0.625rem;
     display: inline-block;
-  }
-
-  .main-nav__link-list__item--try {
-    margin-right: 0;
-    margin-left: auto;
-    padding: 0 0.625rem;
   }
 
   .main-nav__link-list--primary {
@@ -412,9 +401,18 @@ header {
     align-content: center;
     align-items: center;
     height: 1.75rem;
-    padding-left: 7.5rem;
+
     padding-bottom: 0;
     margin-bottom: 1.25rem;
+    padding-right: 7.5rem;
+  }
+
+  .main-nav__link-list--primary > a:first-child {
+    padding-left: 7.5rem;
+  }
+
+  .main-nav__link-list__item--try {
+    margin-left: auto;
   }
 
   .main-nav__link-list__item > span {
