@@ -75,7 +75,7 @@ header {
   align-items: center;
   justify-content: center;
   margin: 0 10vw;
-  background-image: url("https://source.unsplash.com/random/600x800");
+  background-image: url("https://source.unsplash.com/featured/?midi,synthesizer,dj");
   background-size: 100%;
   background-repeat: no-repeat;
   min-height: calc(100vh - 125px);
