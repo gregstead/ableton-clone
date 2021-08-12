@@ -10,11 +10,7 @@
   --clr-blue: #0000ff;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+/* Typography */
 
 body {
   font-size: 16px;
@@ -27,6 +23,35 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.first-section > p {
+  font-size: 1.1em;
+}
+
+.hero h1 {
+  color: var(--clr-orange);
+  font-size: 8em;
+  font-weight: 100;
+}
+
+.main-nav__link-list--primary > a {
+  font-weight: 100;
+  font-size: 0.9em;
+}
+
+.main-nav__link-list--secondary > a {
+  font-weight: 100;
+  font-size: 1em;
+}
+
+.main-nav__link-list__item--account {
+  font-size: 0.875rem;
+}
+s *,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 main {
@@ -49,11 +74,19 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 8.3vh 8.3vh 8.3vh;
+  margin: 0 10vw;
   background-image: url("https://source.unsplash.com/random/600x800");
   background-size: 100%;
   background-repeat: no-repeat;
-  min-height: calc(100vh);
+  min-height: calc(100vh - 125px);
+}
+
+.extra-indent {
+  padding: 20vh 25vw;
+}
+
+.first-section > p {
+  padding-top: 4.5vh;
 }
 
 .main-nav {
@@ -84,6 +117,7 @@ header {
   display: block;
   width: 3.75em;
   height: 1.75em;
+  margin-left: 1.2em;
 }
 
 .main-nav__logo__image g {
@@ -120,8 +154,8 @@ header {
   align-items: center;
 }
 
-.main-nav__link-list__item--account {
-  font-size: 0.875rem;
+.main-nav__link-list--secondary {
+  padding: 3.5vh 2vw;
 }
 
 .main-nav__trigger-label {
@@ -224,6 +258,35 @@ header {
 
 .main-nav {
   z-index: 35;
+}
+
+.rectangle-image > img {
+  scale: 0.7;
+}
+
+.second-section {
+  position: relative;
+}
+
+.split {
+  display: flex;
+}
+
+.square-image > img {
+  scale: 0.8;
+}
+
+.second-section > div {
+  justify-content: center;
+  align-items: center;
+}
+
+.yellow-square {
+  position: absolute;
+  height: 100%;
+  width: 60vw;
+  right: 0;
+  background-color: var(--clr-yellow);
 }
 
 @media screen and (min-width: 1024px) {
