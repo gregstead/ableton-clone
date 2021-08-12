@@ -1,6 +1,6 @@
 # ableton-clone
 
-A responsive clone of Ableton's menu header
+A responsive clone of Ableton's About page
 
 # source
 
