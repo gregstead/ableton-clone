@@ -8,9 +8,25 @@
   --clr-lavender: #d5b3ff;
   --clr-green: #b6ffc0;
   --clr-blue: #0000ff;
+  --clr-facebook-blue: #3477f2;
+  --clr-twitter-blue: #1da1f2;
+  --clr-youtube-red: #ff001d;
+  --clr-instagram-organge: #f77737;
+  --clr-bg-grey: #f3f3f3;
+}
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: #d2d2d2 var(--clr-bg-grey);
 }
 
 /* Typography */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 body {
   font-size: 16px;
@@ -20,13 +36,37 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+footer {
+  font-size: 1em;
+  font-weight: 100;
 }
 
-.first-section > p {
+footer > .footer_main-container > h1 {
+  font-size: 4em;
+  font-weight: 100;
+}
+
+footer > .footer_main-container > div > h2 {
   font-size: 1.1em;
+  font-weight: 900;
+}
+
+footer > .footer_main-container > div > a,
+footer > .footer_main-container > div > p {
+  font-size: 0.9em;
+  font-weight: 100;
+}
+
+.text-section > p {
+  font-size: 1.1em;
+}
+
+.fab {
+  color: var(--clr-white);
+}
+
+.footer_social-links > a > i {
+  font-size: 1.5em;
 }
 
 .hero h1 {
@@ -48,11 +88,16 @@ a {
 .main-nav__link-list__item--account {
   font-size: 0.875rem;
 }
-s *,
+
+/* CSS Reset */
+
+*,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
+/* Display rules */
 
 main {
   display: block;
@@ -70,6 +115,10 @@ header {
   transition: all ease-in 250ms;
 }
 
+footer {
+  display: inline-block;
+}
+
 .hero {
   display: flex;
   align-items: center;
@@ -85,8 +134,95 @@ header {
   padding: 20vh 25vw;
 }
 
-.first-section > p {
-  padding-top: 4.5vh;
+.fa-facebook {
+  background-color: var(--clr-facebook-blue);
+}
+
+.fa-twitter {
+  background-color: var(--clr-twitter-blue);
+}
+
+.fa-youtube {
+  background-color: var(--clr-youtube-red);
+}
+
+.fa-instagram {
+  background-color: var(--clr-instagram-organge);
+}
+
+.footer_links {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1em;
+}
+
+.footer_language-links--title {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.footer_community-links,
+.footer_distributor-links,
+.footer_language-links {
+  padding-bottom: 10vh;
+}
+
+.footer_main-container {
+  display: grid;
+  grid-template-columns: 30% 30% 20% 20%;
+  padding-inline: 8.3333vw;
+  margin-bottom: 10vh;
+}
+
+.footer_main-container > h1,
+.footer_main-container > .footer_sub-footer {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.footer_newsletter-links,
+.footer_language-links {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  margin-bottom: 10vh;
+}
+
+.footer_separator {
+  margin-top: 8.3vw;
+  border-bottom: 2px solid var(--clr-bg-grey);
+}
+
+.footer_social-links {
+  padding-right: 12vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_social-links > a > i {
+  margin: 0.5em 0.5em 0 0;
+  padding: 0.35em;
+}
+
+.footer_social-links-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_sub-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_sub-footer__link {
+  padding-inline: 0.5vw;
+}
+
+.footer_sub-footer__link--madeinBerlin {
+  margin-left: auto;
+}
+
+.footer_title {
+  margin-block: 1em;
 }
 
 .main-nav {
@@ -264,7 +400,7 @@ header {
   scale: 0.7;
 }
 
-.second-section {
+.img-section {
   position: relative;
 }
 
@@ -276,7 +412,11 @@ header {
   scale: 0.8;
 }
 
-.second-section > div {
+.text-section > p {
+  padding-top: 4.5vh;
+}
+
+.img-section > div {
   justify-content: center;
   align-items: center;
 }
@@ -287,6 +427,14 @@ header {
   width: 60vw;
   right: 0;
   background-color: var(--clr-yellow);
+}
+
+.green-square {
+  position: absolute;
+  height: 100%;
+  width: 60vw;
+  left: 0;
+  background-color: var(--clr-green);
 }
 
 @media screen and (min-width: 1024px) {
@@ -390,21 +538,10 @@ header {
     padding-left: o;
   }
 
-  .main-nav__link-list .main-nav__link-list__item:first-child {
-    margin-left: 0;
-    padding-left: 0;
-  }
-
   .main-nav__link-list__item {
     margin-right: 0.3125rem;
     padding: 0 0.625rem;
     display: inline-block;
-  }
-
-  .main-nav__link-list__item--try {
-    margin-right: 0;
-    margin-left: auto;
-    padding: 0 0.625rem;
   }
 
   .main-nav__link-list--primary {
@@ -412,9 +549,18 @@ header {
     align-content: center;
     align-items: center;
     height: 1.75rem;
-    padding-left: 7.5rem;
+
     padding-bottom: 0;
     margin-bottom: 1.25rem;
+    padding-right: 7.5rem;
+  }
+
+  .main-nav__link-list--primary > a:first-child {
+    padding-left: 7.5rem;
+  }
+
+  .main-nav__link-list__item--try {
+    margin-left: auto;
   }
 
   .main-nav__link-list__item > span {
