@@ -25,8 +25,7 @@ a {
   color: inherit;
 }
 
-.first-section > p,
-.third-section > p {
+.text-section > p {
   font-size: 1.1em;
 }
 
@@ -49,11 +48,16 @@ a {
 .main-nav__link-list__item--account {
   font-size: 0.875rem;
 }
-s *,
+
+/* CSS Reset */
+
+*,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
+/* Display rules */
 
 main {
   display: block;
@@ -71,6 +75,11 @@ header {
   transition: all ease-in 250ms;
 }
 
+footer {
+  display: inline-block;
+  height: 100vh;
+}
+
 .hero {
   display: flex;
   align-items: center;
@@ -86,9 +95,26 @@ header {
   padding: 20vh 25vw;
 }
 
-.first-section > p,
-.third-section > p {
-  padding-top: 4.5vh;
+.footer_main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.footer_main-container > h1,
+.footer_main-container > .footer_sub-footer {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.footer_newsletter-links {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.footer_social-links {
+  display: flex;
+  flex-direction: column;
 }
 
 .main-nav {
@@ -266,7 +292,7 @@ header {
   scale: 0.7;
 }
 
-.second-section {
+.img-section {
   position: relative;
 }
 
@@ -278,7 +304,11 @@ header {
   scale: 0.8;
 }
 
-.second-section > div {
+.text-section > p {
+  padding-top: 4.5vh;
+}
+
+.img-section > div {
   justify-content: center;
   align-items: center;
 }
@@ -289,6 +319,14 @@ header {
   width: 60vw;
   right: 0;
   background-color: var(--clr-yellow);
+}
+
+.green-square {
+  position: absolute;
+  height: 100%;
+  width: 60vw;
+  left: 0;
+  background-color: var(--clr-green);
 }
 
 @media screen and (min-width: 1024px) {
