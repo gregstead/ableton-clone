@@ -16,6 +16,11 @@
 
 /* Typography */
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   font-size: 16px;
   font-family: "Alata";
@@ -24,9 +29,14 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+footer {
+  font-size: 0.8em;
+  font-weight: 100;
+}
+
+footer > .footer_main-container > h1 {
+  font-size: 5em;
+  font-weight: 100;
 }
 
 .text-section > p {
@@ -89,7 +99,6 @@ header {
 
 footer {
   display: inline-block;
-  height: 100vh;
 }
 
 .hero {
@@ -123,11 +132,23 @@ footer {
   background-color: var(--clr-instagram-organge);
 }
 
+.footer_links {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1em;
+}
+
+.footer_community-links,
+.footer_distributor-links,
+.footer_language-links {
+  padding-bottom: 10vh;
+}
+
 .footer_main-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 30% 30% 20% 20%;
   padding-inline: 8.3333vw;
+  margin-bottom: 10vh;
 }
 
 .footer_main-container > h1,
@@ -139,10 +160,11 @@ footer {
 .footer_newsletter-links {
   grid-column-start: 3;
   grid-column-end: 5;
+  margin-bottom: 10vh;
 }
 
 .footer_social-links {
-  padding-right: 6em;
+  padding-right: 12vw;
   display: flex;
   justify-content: space-between;
 }
@@ -155,6 +177,23 @@ footer {
 .footer_social-links-container {
   display: flex;
   flex-direction: column;
+}
+
+.footer_sub-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_sub-footer__link {
+  padding-inline: 0.5vw;
+}
+
+.footer_sub-footer__link--madeinBerlin {
+  margin-left: auto;
+}
+
+.footer_title {
+  margin-block: 1em;
 }
 
 .main-nav {
