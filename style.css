@@ -12,6 +12,13 @@
   --clr-twitter-blue: #1da1f2;
   --clr-youtube-red: #ff001d;
   --clr-instagram-organge: #f77737;
+  --clr-bg-grey: #f3f3f3;
+}
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: #d2d2d2 var(--clr-bg-grey);
 }
 
 /* Typography */
@@ -30,12 +37,23 @@ body {
 }
 
 footer {
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: 100;
 }
 
 footer > .footer_main-container > h1 {
-  font-size: 5em;
+  font-size: 4em;
+  font-weight: 100;
+}
+
+footer > .footer_main-container > div > h2 {
+  font-size: 1.1em;
+  font-weight: 900;
+}
+
+footer > .footer_main-container > div > a,
+footer > .footer_main-container > div > p {
+  font-size: 0.9em;
   font-weight: 100;
 }
 
@@ -138,6 +156,11 @@ footer {
   padding-right: 1em;
 }
 
+.footer_language-links--title {
+  margin-right: 0;
+  padding-right: 0;
+}
+
 .footer_community-links,
 .footer_distributor-links,
 .footer_language-links {
@@ -157,10 +180,16 @@ footer {
   grid-column-end: 5;
 }
 
-.footer_newsletter-links {
+.footer_newsletter-links,
+.footer_language-links {
   grid-column-start: 3;
   grid-column-end: 5;
   margin-bottom: 10vh;
+}
+
+.footer_separator {
+  margin-top: 8.3vw;
+  border-bottom: 2px solid var(--clr-bg-grey);
 }
 
 .footer_social-links {
@@ -170,8 +199,8 @@ footer {
 }
 
 .footer_social-links > a > i {
-  margin-top: 0.5em;
-  padding: 0.2em;
+  margin: 0.5em 0.5em 0 0;
+  padding: 0.35em;
 }
 
 .footer_social-links-container {
